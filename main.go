@@ -10,7 +10,8 @@ import (
 
 func main() {
 	// connect to a database
-	conn, err := sql.Open("pgx", "host=localhost port=5432 dbname=test_connection user=gummy789j")
+	// add your password if you have, otherwise not
+	conn, err := sql.Open("pgx", "host=localhost port=5432 dbname=test_connection user=your_username password=your_password")
 	if err != nil {
 		log.Fatal(fmt.Sprintf("Uable to connect: %v/n", err))
 	}
